@@ -4,7 +4,7 @@ Real time chat on Django (channels). I implemented this project using special li
 ## Discription
 
 I used the standard Sqlite database, which is installed by Django by default. All the messages in my chat saved in memory channel layer. You can connect Redis instead by changing the parameter in settings:
-> CHANNEL_LAYERS = {
+< CHANNEL_LAYERS = {
     'default': {
         'BACKEND': 'channels.layers.InMemoryChannelLayer'
         }
