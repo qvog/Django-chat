@@ -4,6 +4,7 @@ Real time chat on Django (channels). I implemented this project using special li
 ## Discription
 
 In this project I have implemented the following things:
+
     1. Model of rooms which u can change in Django admin panel
     2. User regestration and sign in by UserCreationForm and User model (also an option to log out of the account using the auth_views module)
     3. Sending and accepted messages inside room in real time.
