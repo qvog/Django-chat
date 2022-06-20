@@ -1,15 +1,15 @@
 # Django-chat
-Real time chat on Django (channels). I implemented this project using special library "channels" which allows to work with websockets. For the frontpage part of this project i used css framework "Tailwind". 
+Чат в реальном времени на Django. Я реализовал этот проект, используя специальную библиотеку "channels", которая позволяет работать с websockets.
 
-## Discription
+## Описание
 
-In this project I have implemented the following things:
+В этом проекте я реализовал следующие вещи:
 
-    1. Model of rooms which u can change in Django admin panel
-    2. User regestration and sign in by UserCreationForm and User model (also an option to log out of the account using the auth_views module)
-    3. Sending and accepted messages inside room in real time.
+    1. Модель комнат, которую вы можете изменить в админ-панели Django
+    2. Регистрация пользователя и вход в систему с помощью UserCreationForm и модели пользователя (также есть возможность выхода из учетной записи с помощью модуля auth_views)
+    3. Отправка и принятие сообщений внутри комнаты в режиме реального времени.
 
-I used the standard Sqlite database, which is installed by Django by default. All the messages in my chat saved in memory channel layer. You can connect Redis database instead by changing the parameter in settings:
+Я использовал стандартную базу данных Sqlite, которая по умолчанию установлена Django. Все сообщения в моем чате сохраняются на канальном уровне памяти. Вместо этого вы можете подключить базу данных Redis, изменив параметр в настройках:
 
 ```python
 CHANNEL_LAYERS = {
@@ -19,10 +19,23 @@ CHANNEL_LAYERS = {
 }
 ```
 
+Установка:
+--
+```
+$ git clone https://github.com/qvog/django-ecommerce.git
+$ cd django-ecommerce
+$ pip install -r requirements.txt
+```
 
-## To use this project follow these steps:
+> Сделайте настройку собственной базы данных! 
 
-  1. Create your working environment (python3 -m venv chatvenv)
-  2. Install Django (4.0.2), channels(3.0.4)
-  4. Run app (python3 manage.py runserver)
+Миграции и создание супер-пользователя.
+```
+python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser
+python manage.py runserver
+```
+
+> Используйте адрес: http://127.0.0.1:8000/ (Для проверки) 
 
