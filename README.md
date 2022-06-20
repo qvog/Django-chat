@@ -3,6 +3,7 @@
 
 ### Технологии:
 - Django 4.0.2
+- Channels 3.0.4
 - Python 3.10.4
 - HTML, CSS (Tailwind)
 - SQLite
